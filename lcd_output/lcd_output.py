@@ -34,11 +34,11 @@ def main():
     print(horizontal_line)
     for _ in range(0, 7):
         print('|', end='')
-        for symbol in input_string:
-            if symbol is input_string[-1]:
-                print(glyph(int(symbol), _), end='')
+        for i in range(len(input_string)):
+            if i is len(input_string) - 1:
+                print(glyph(int(input_string[i]), _), end='')
             else:
-                print(glyph(int(symbol), _) + ' ', end='')
+                print(glyph(int(input_string[i]), _) + ' ', end='')
         print('|')
     print(horizontal_line)
     print()
